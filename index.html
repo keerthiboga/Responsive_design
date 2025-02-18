@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive web Design Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lemon&family=Oleo+Script:wght@400;700&family=Satisfy&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *
+    {
+        margin:0;
+        padding:0;
+        scrollbar-width: none;
+    }
+    body
+    {
+        color:black;
+        background-color:white;
+        overflow: scroll;
+    }
+    .main
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .container{
+        height:90vh;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        padding:5vh;
+    }
+    .content
+    {
+        display:flex;
+        justify-content: space-around;
+        width:80vw;
+    }
+    .image
+    {
+        height:500px;
+        width:40%;
+        border-radius: 25px;
+        background-image: url("profilepic.jpg");
+        background-size: cover;
+    }
+    .info
+    {
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+        gap:12px;
+        text-align: justify;
+    }
+    .specialisation
+    {
+        width:fit-content;
+        padding:0 10px;
+        height:40px;
+        border-radius: 25px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        font-size: 20px;
+        font-weight: 300;
+        opacity: 0.9;
+        background: #ff512f;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #fc3a91, #ff512f);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #fc3a91, #ff512f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    .menu
+    {
+        display:flex;
+        flex-direction: column;
+        height:300px;
+        width:40px;
+        font-size:25px;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 25px;
+        border: 1px solid #fc3a91;
+        box-shadow: 2px 2px 5px #e770a5;
+    }
+    .menu i:hover
+    {
+        cursor:pointer;
+        color:#fc3a91;
+    }
+    .projects
+    {
+        display:flex;
+        justify-content: space-around;
+        margin-bottom:50px;
+    }
+    .card
+    {
+        height:200px;
+        width:300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:15px;
+        border:1px solid #ffa3cc;
+        box-shadow: #ffa3cc 0px 10px 7px -5px, #ffa3cc 0px 8px 16px -8px;
+    }
+    .card:hover
+    {
+        scale: 1.1;
+        visibility: visible;
+        background-color: #fc3a91;
+    }
+    .cardinfo
+    {
+        width:80%;
+        font-size: 20px;
+        opacity:0.9;
+    }
+    .menu i
+    {
+        opacity:0.9;
+    }
+    .text
+    {
+        font-size:20px ;
+        opacity:0.8;
+    }
+    @media (max-width: 1200px)
+    {
+        .main
+        {
+            display:flex;
+            flex-direction: column;
+        }
+        .container
+        {
+            height:auto;
+        }
+        .content
+        {
+            padding-top: 5vh;
+            flex-direction: column;
+            gap:20px;
+        }
+        .image
+        {
+            min-width: 430px;
+            min-height:450px;
+            background-size: cover;
+        }
+        .specialisation
+        {
+            min-width: fit-content;
+            padding:0 10px;
+        }
+        .info
+        {
+            width:90%;
+        }
+        .projects
+        {
+            flex-wrap: wrap;
+            gap:20px;
+        }
+    }
+    @media(max-width: 550px)
+    {
+        .image
+        {
+            min-width: 450px;
+            height:350px;
+            scale:0.8;
+            border-radius: 50%;
+            position: relative;
+            right:50px;
+            box-shadow: 0px 10px 10px #515151;
+        }
+        .menu
+        {
+            position:absolute;
+            top:10px;
+            right:5px;
+            width:200px;
+            height:40px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .menu i
+        {
+            font-size: 20px;
+        }
+        .specialisation
+        {
+            min-width: 350px;
+            font-size: 18px;
+        }
+        .projects
+        {
+            justify-content: center;
+            align-items: center;
+        }
+        .card
+        {
+            min-width:300px;
+        }
+        .text
+        {
+            font-size: 18px;
+        }
+    }
+    .tangerine-regular {
+        font-family: "Tangerine", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 45px;
+      }
+      .lemon-regular {
+        font-family: "Lemon", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:40px;
+        display: flex;
+        gap:10px;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="content">
+                <div class="image">
+                </div>
+                <div class="info">
+                    <h3 class="tangerine-regular">Hi There!</h3>
+                    <h1 class="lemon-regular">I'M <div style="color:#fc3a91">KEERTHI</div></h1>
+                    <div class="specialisation">
+                        <h4>FrontEnd Web Developer || UI/UX Designer</h4>
+                    </div>
+                    <p class="text"> LOREM IPSUM is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting, 
+                        remaining essentially unchanged.not only five centuries, but also the leap into electronic typesetting, 
+                        remaining essentially unchanged.
+                    </p>
+                </div>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-bolt"></i>
+                <i class="fa-solid fa-paperclip"></i>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="card">
+                <div class="cardinfo">
+                    Creating a language learning mobile app with AI-powered lessons and gamification. 
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardinfo">
+                    Promoting a new line of eco-friendly cleaning products.
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardinfo">
+                    Developing new methods for early cancer detection. 
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardinfo">
+                    Improving public transportation in a major city.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
